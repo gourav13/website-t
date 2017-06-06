@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="w1.css">
+<link rel="stylesheet" type="text/css" href="modal1.css">
+<link rel="stylesheet" type="text/css" href="modal2.css">
+
+<link rel="stylesheet" type="text/css" href="modal4.css">
+<script src="w1.js"></script>
+
+ 
+</head>
+<body>
+
+
+<!-- background images -->
+<div class="z">
+	<div class="responsive">
+	  <div class="gallery">
+		  <img src="download1.jpg" alt="Trolltunga Norway" width="300" height="400">
+	  </div>
+	</div>
+	<div class="responsive">
+	  <div class="gallery">
+		  <img src="download2.jpg" alt="Trolltunga Norway" width="300" height="400">
+	  </div>
+	</div>
+	<div class="responsive">
+	  <div class="gallery">
+		  <img src="download3.jpg" alt="Trolltunga Norway" width="300" height="400">
+	  </div>
+	</div>
+	<div class="responsive">
+	  <div class="gallery">
+		  <img src="download4.jpg" alt="Trolltunga Norway" width="300" height="400">
+	  </div>
+	</div>
+	<div class="responsive">
+	  <div class="gallery">
+		  <img src="download5.jpg" alt="Trolltunga Norway" width="300" height="200">
+	  </div>
+	</div>
+	<div class="responsive">
+	  <div class="gallery">
+		  <img src="download6.jpg" alt="Trolltunga Norway" width="300" height="200">
+	  </div>
+	</div>
+	<div class="responsive">
+	  <div class="gallery">
+		  <img src="download7.jpg" alt="Trolltunga Norway" width="300" height="200">
+	  </div>
+	</div>
+	<div class="responsive">
+	  <div class="gallery">
+		  <img src="download2.jpg" alt="Trolltunga Norway" width="300" height="200">
+	  </div>
+	</div>
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+
+<!-- The Modal11111111 -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>ENTER SUBJECT</h3>
+    </div>
+    <div class="modal-body">
+      <input type="text" id="fname" name="fname">
+      <p>suggestion</p>
+    </div>
+    <div class="modal-footer">
+    
+	  <button  class="button1" onclick="nextslide()" > find</button>
+	  <button  class="button3" onclick="" > Tutor login</button>
+	  <button  class="button2" onclick="tutorregister()" > Tutor register</button>
+	  
+	  
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+
+
+<!-- The Modal2222 -->
+<div id="myModal" class="modal2">
+
+  <!-- Modal content -->
+  <div class="modal-content2">
+    <div class="modal-header">
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body2">
+      <p>where would you like to take classes</p>
+      <ul>
+	    <li>My Home<span><input type="checkbox"></input> </li>
+		<li>willing to travel<span><input type="checkbox"></input></li>
+		<li>online<span><input type="checkbox"></input></li>
+	<ul>	
+    </div>
+    <div class="modal-footer">
+      
+	  <button class="button2" onclick="nextslide()" > next</button>
+	  <button class="button1" onclick="previousslide()" > previous</button>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+
+
+<!-- The Modal3333333333333 -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>enter the location</p>
+      <p><input type="text" id="fname" name="fname"></p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+	  <button id="btn" class="button2" onclick="nextslide()" > next</button>
+	  <button id="btn" class="button1" onclick="previousslide()" > previous</button>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+
+
+<!-- The Modal444 -->
+<div id="myModal" class="modal4">
+
+  <!-- Modal content -->
+  <div class="modal-content4">
+    <div class="modal-header4">
+      <h2>You are almost done</h2>
+    </div>
+    <div class="modal-body4">
+
+      <p>To submit your requirement, please provide</p>
+        <label>Name</label>
+		<input type="text"></input>
+	    <label>number</label>
+		<input type="number"></input>
+		
+		
+    </div>
+    <div class="modal-footer4">
+      
+	  <button class="button2" onclick="nextslide()" > next</button>
+	  <button class="button1" onclick="previousslide()" > previous</button>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+   
+</div>
+<p id="demo"></p>
+<script>
+var slideIndex=0;
+var slide=0;
+slide=slide+2;
+if(slideIndex==0)
+{ slideIndex=1;
+  showSlides();
+}
+
+function nextslide()
+{ slideIndex++;
+ showSlides();
+ }
+
+function previousslide()
+{ slideIndex--;
+showSlides();
+}
+
+
+
+function showSlides() {
+    
+	
+	var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    //slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  document.getElementById("demo").innerHTML = slide;	
+
+}
+
+	
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "block";
+    }
+}
+</script>
+</body>
+</html> 
